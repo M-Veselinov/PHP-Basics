@@ -1,0 +1,16 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Mario
+ * Date: 14-8-13
+ * Time: 17:50
+ */
+$month = date("F");
+$year = date("Y");
+$totalDays = date("t");
+for($i = 1;$i <= $totalDays;$i++){
+    $date = strtotime("$i $month $year");
+    if(date("l",$date) == "Sunday"){
+    echo date("jS F, Y", $date) . "\n";
+    }
+}
